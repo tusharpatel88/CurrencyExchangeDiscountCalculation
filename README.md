@@ -25,15 +25,15 @@ https://open.er-api.com/v6/latest/{base_currency}?apikey=your-api-key
   - Apply various discounts based on the following rules:
   - Employee: 30% discount.
   - Affiliate: 10% discount.
-  - Customer for over 2 years: 5$ discount for 100$ bill if 105$ bill get 5$
-  - Every $100 on the bill: $5 discount.
+  - Customer for over 2 years: 5% discount.
+  - Every $100 on the bill: $5 discount.If 105$ bill get 5$
   - Percentage Discount rules do not apply to groceries.
   - Only one percentage discount can apply to a bill.
   - Every $100 on the bill: $5 discount will apply to all the bill.
 
    Currency Conversion:
-   Convert the total amount to the target currency using the retrieved exchange rates.
-   Calculate the final payable amount in the target currency after applying discounts.
+   - Convert the total amount to the target currency using the retrieved exchange rates.
+   - Calculate the final payable amount in the target currency after applying discounts.
 
 4. Authentication:
 
@@ -41,19 +41,19 @@ https://open.er-api.com/v6/latest/{base_currency}?apikey=your-api-key
 
 5. API Endpoint:
 
-   The main API endpoint for calculation: /api/calculate
-   Accepts parameters like:
-   Bill details (items, categories, total amount).
-   User type (employee, affiliate, customer tenure).
-   Original currency and target currency.
-   Returns the net payable amount in the target currency.
+   - The main API endpoint for calculation: /api/calculate
+   - Accepts parameters like:
+   - Bill details (items, categories, total amount).
+   - User type (employee, affiliate, customer tenure).
+   - Original currency and target currency.
+   - Returns the net payable amount in the target currency.
 
 6. Design and Testing:
 
-   Use object-oriented principles for application design.
-   Provide a high-level UML class diagram for the solution.
-   Write unit tests with appropriate mocking where applicable.
-   Maintain simplicity and adhere to modern software development practices.
+   - Use object-oriented principles for application design.
+   - Provide a high-level UML class diagram for the solution.
+   - Write unit tests with appropriate mocking where applicable.
+   - Maintain simplicity and adhere to modern software development practices.
 
 7. Documentation:
 
@@ -71,15 +71,15 @@ Project Structure
 How to Run
 Prerequisites
 
-    Java 21 or higher
-    Maven 3.8 or higher
-    API key for the currency exchange service (Open Exchange Rates or similar)
+    - Java 21 or higher
+    - Maven 3.8 or higher
+     - API key for the currency exchange service (Open Exchange Rates or similar)
 
 Steps to Run the Application
 
     Clone the repository:
 
-git clone https://github.com/your-username/CurrencyExchangeDiscountCalculation.git
+git clone https://github.com/tusharpatel88/CurrencyExchangeDiscountCalculation.git
 
 Navigate to the project directory:
 
