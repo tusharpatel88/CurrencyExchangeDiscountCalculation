@@ -25,7 +25,7 @@ https://open.er-api.com/v6/latest/{base_currency}?apikey=your-api-key
    Apply various discounts based on the following rules:
    Employee: 30% discount.
    Affiliate: 10% discount.
-   Customer for over 2 years: 5% discount.
+   Customer for over 2 years: 5$ discount for 100$ bill if 105$ bill get 5$
    Every $100 on the bill: $5 discount.
    Percentage Discount rules do not apply to groceries.
    Only one percentage discount can apply to a bill.
@@ -99,40 +99,47 @@ Sample Request
 
 POST /api/calculate
 Content-Type: application/json
-
 {
-"items": [
-{"name": "Laptop", "category": "electronics", "price": 1000},
-{"name": "Apple", "category": "groceries", "price": 5}
-],
-"userType": "employee",
-"customerTenure": 3,
-"originalCurrency": "USD",
-"targetCurrency": "EUR"
+  "items": [
+    {
+      "itemName": "Laptop",
+      "category": "Electronics",
+      "amount": 1200.0
+    },
+    {
+      "itemName": "Headphones",
+      "category": "Electronics",
+      "amount": 150.0
+    },
+    {
+      "itemName": "Apple",
+      "category": "Groceries",
+      "amount": 5.0
+    },
+    {
+      "itemName": "Banana",
+      "category": "Groceries",
+      "amount": 3.0
+    }
+  ],
+  "userType": "affiliate",
+  "customerTenure": 3,  // Number of years the customer has been with the store
+  "originalCurrency": "USD",
+  "targetCurrency": "EUR"
 }
+
 
 Sample Response
 
 {
-"netPayableAmount": 850.30,
-"currency": "EUR"
+    "data": 1109.0403875,
+    "currency": "EUR"
 }
 
 Unit Tests and Code Coverage
 Running Unit Tests
 
-You can run the tests with:
 
-mvn test
-
-Generating Code Coverage Report
-
-Generate a Jacoco code coverage report:
-
-mvn verify
-
-The code coverage report will be available in the target/site/jacoco/index.html file.
-Build Scripts and Static Analysis
 
 This project uses Maven for building and testing. The following plugins are configured:
 
