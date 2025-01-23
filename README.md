@@ -22,8 +22,8 @@ https://open.er-api.com/v6/latest/{base_currency}?apikey=your-api-key
 
 2. Discount and Conversion Logic:
 
-   Apply various discounts based on the following rules:
-   Employee: 30% discount.
+   **1** Apply various discounts based on the following rules:
+   **2** Employee: 30% discount.
    Affiliate: 10% discount.
    Customer for over 2 years: 5$ discount for 100$ bill if 105$ bill get 5$
    Every $100 on the bill: $5 discount.
