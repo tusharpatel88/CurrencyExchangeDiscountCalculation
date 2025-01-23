@@ -21,10 +21,10 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
 	@Value("${spring.security.user.name}")
-	private String user;
+    public String user;
 
 	@Value("${spring.security.user.password}")
-	private String password;
+    public String password;
 
 	@SuppressWarnings({ "deprecation", "removal" })
 	@Bean
@@ -47,7 +47,7 @@ public class SecurityConfig {
 
 	@SuppressWarnings("deprecation")
 	@Bean
-	UserDetailsService userDetailsService() {
+    public UserDetailsService userDetailsService() {
 		UserDetails userDetails = User.withDefaultPasswordEncoder().username(user).password(password).roles("USER")
 				.build();
 

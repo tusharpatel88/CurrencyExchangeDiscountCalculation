@@ -1,5 +1,6 @@
 package com.finance.currency.calculation.controller;
 
+import com.finance.currency.calculation.model.ApiResponse;
 import com.finance.currency.calculation.model.Bill;
 import com.finance.currency.calculation.service.ExchangeRateAndBillCalculationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,8 +28,8 @@ public class CurrencyExchangeController {
 	 * @return the final payable amount after all calculations.
 	 */
 	@PostMapping("/calculate")
-	public ResponseEntity<Double> calculatePayableAmount(@RequestBody Bill bill) {
+	public ResponseEntity<ApiResponse> calculatePayableAmount(@RequestBody Bill bill) {
 		double finalAmount = exchangeRateService.calculateTotalPayableAmount(bill);
-		return ResponseEntity.ok(finalAmount);
+		return ResponseEntity.ok(new ApiResponse(finalAmount, bill.targetCurrency()));
 	}
 }

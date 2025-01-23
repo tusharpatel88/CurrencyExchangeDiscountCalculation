@@ -16,7 +16,7 @@ public class CacheConfig {
 
     // Inject expiration time (in minutes) from application.properties or application.yml
     @Value("${cache.expireAfterWriteMinutes}")
-    private long expireAfterWriteMinutes;
+    public long expireAfterWriteMinutes;
 
     @Bean
     public CacheManager cacheManager() {
