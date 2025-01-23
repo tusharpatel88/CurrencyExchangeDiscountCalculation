@@ -4,11 +4,7 @@ Overview
 The CurrencyExchangeDiscountCalculation is a Spring Boot application designed to integrate with third-party currency exchange APIs and calculate the payable amount of a bill after applying various discounts. The application exposes an API endpoint that allows users to submit a bill in one currency and get the payable amount in another currency, accounting for applicable discounts.
 Key Features
 
-    Third-Party API Integration: The application integrates with a currency exchange API (such as ExchangeRate-API or Open Exchange Rates) to retrieve real-time currency exchange rates.
-    Discount Calculation: Discounts are applied based on user status (employee, affiliate, customer tenure) and other rules (e.g., per $100 discount).
-    Currency Conversion: The bill amount is converted from the original currency to the target currency using the fetched exchange rates.
-    Authentication: The application secures the API with user authentication.
-    API Endpoint: An exposed endpoint (/api/calculate) that accepts bill details and returns the final payable amount in the target currency.
+
 
 Requirements
 1. Third-Party API Integration:
