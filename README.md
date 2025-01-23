@@ -59,6 +59,10 @@ https://open.er-api.com/v6/latest/{base_currency}?apikey=your-api-key
 
    This README file provides information on running the code, testing, and generating coverage reports.
 
+   **UML Diagram**
+   ![image](https://github.com/user-attachments/assets/e58bfc9e-18f1-471a-ba0d-e4fcf895be22)
+
+
 Project Structure
 
 
