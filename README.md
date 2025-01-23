@@ -1,4 +1,4 @@
-CurrencyExchangeDiscountCalculation - Spring Boot Application
+**CurrencyExchangeDiscountCalculation - Spring Boot Application**
 Overview
 
 The CurrencyExchangeDiscountCalculation is a Spring Boot application designed to integrate with third-party currency exchange APIs and calculate the payable amount of a bill after applying various discounts. The application exposes an API endpoint that allows users to submit a bill in one currency and get the payable amount in another currency, accounting for applicable discounts.
