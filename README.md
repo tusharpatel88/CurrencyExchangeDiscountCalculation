@@ -1,22 +1,49 @@
 **CurrencyExchangeDiscountCalculation - Spring Boot Application**
-Overview
+**Overview**
 
 The CurrencyExchangeDiscountCalculation is a Spring Boot application designed to integrate with third-party currency exchange APIs and calculate the payable amount of a bill after applying various discounts. The application exposes an API endpoint that allows users to submit a bill in one currency and get the payable amount in another currency, accounting for applicable discounts.
-Key Features
+**Key Features**
+
+**Third-Party API Integration:**
+
+The application integrates with a currency exchange API (e.g., ExchangeRate-API, Open Exchange Rates) to fetch real-time exchange rates.
+Uses an API key for authentication to retrieve exchange rate data for currency conversion.
+**Discount Calculation:**
+
+Discounts are applied based on user status and other rules:
+Employee: 30% discount.
+Affiliate: 10% discount.
+Customer with over 2 years of tenure: 5% discount 
+5$ discount on 100$ bill. if 105$ they get 5$ if 200$ bill then 10$ discount
+Exclusions: Percentage discounts do not apply to groceries.
+Limitations: Only one percentage discount can apply to a bill; the $5 discount per $100 applies to all items in the bill.
+**Currency Conversion:**
+
+The bill amount is converted from the original currency to the target currency using the real-time exchange rates fetched from the third-party API.
+The final payable amount is calculated in the target currency after applying the appropriate discounts.
+Authentication:
+
+The application secures the API endpoints using user authentication.
+Ensures only authorized users can access the discount and currency calculation features.
+API Endpoint:
+
+The application exposes a REST API endpoint at /api/calculate.
+This endpoint accepts bill details (items, categories, total amount), user type (employee, affiliate, customer tenure), original currency, and target currency.
+It returns the final payable amount in the target currency after all discounts and currency conversion are applied.
 
 
 
-Requirements
+**Requirements**
 1. Third-Party API Integration:
 
    Integrates with a currency exchange API (e.g., ExchangeRate-API or Open Exchange Rates).
    API Key is used to authenticate and retrieve exchange rates (replace your-api-key in the endpoint URL).
 
-Example endpoint:
+**Example endpoint:**
 
 https://open.er-api.com/v6/latest/{base_currency}?apikey=your-api-key
 
-2. Discount and Conversion Logic:
+**2. Discount and Conversion Logic:**
 
   - Apply various discounts based on the following rules:
   - Employee: 30% discount.
@@ -31,11 +58,11 @@ https://open.er-api.com/v6/latest/{base_currency}?apikey=your-api-key
    - Convert the total amount to the target currency using the retrieved exchange rates.
    - Calculate the final payable amount in the target currency after applying discounts.
 
-4. Authentication:
-
+**4. Authentication:
+**
    API endpoints are secured using authentication mechanisms.
 
-5. API Endpoint:
+**5. API Endpoint:**
 
    - The main API endpoint for calculation: /api/calculate
    - Accepts parameters like:
@@ -44,15 +71,15 @@ https://open.er-api.com/v6/latest/{base_currency}?apikey=your-api-key
    - Original currency and target currency.
    - Returns the net payable amount in the target currency.
 
-6. Design and Testing:
+**6. Design and Testing:**
 
    - Use object-oriented principles for application design.
    - Provide a high-level UML class diagram for the solution.
    - Write unit tests with appropriate mocking where applicable.
    - Maintain simplicity and adhere to modern software development practices.
 
-7. Documentation:
-
+**7. Documentation:
+**
    This README file provides information on running the code, testing, and generating coverage reports.
 
    **UML Diagram**
