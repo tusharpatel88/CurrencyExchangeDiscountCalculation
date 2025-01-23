@@ -214,6 +214,7 @@ mvn jacoco:report
 Generates the Jacoco code coverage report. This step should be run after tests to get detailed coverage stats.
 
 **Run SonarQube Analysis**
+Run Sonarcube Server First prior to running this
 mvn sonar:sonar
 Runs the SonarQube scanner and sends the results to a SonarQube server. This helps to analyze and monitor code quality and maintainability.
 
