@@ -157,7 +157,7 @@ Content-Type: application/json
 Sample Response
 ```json
 {
-    "data": 1109.0403875,
+    "data": 1111.82475,
     "currency": "EUR"
 }
 ```
