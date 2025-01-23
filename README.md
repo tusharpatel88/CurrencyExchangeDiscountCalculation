@@ -99,6 +99,7 @@ Sample Request
 
 POST /api/calculate
 Content-Type: application/json
+```json
 {
   "items": [
     {
@@ -127,6 +128,7 @@ Content-Type: application/json
   "originalCurrency": "USD",
   "targetCurrency": "EUR"
 }
+```
 
 
 Sample Response
