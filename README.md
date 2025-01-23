@@ -132,15 +132,12 @@ Content-Type: application/json
 
 
 Sample Response
-
+```json
 {
     "data": 1109.0403875,
     "currency": "EUR"
 }
-
-Unit Tests and Code Coverage
-Running Unit Tests
-
+```
 
 
 This project uses Maven for building and testing. The following plugins are configured:
