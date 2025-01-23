@@ -27,18 +27,19 @@ https://open.er-api.com/v6/latest/{base_currency}?apikey=your-api-key
    Affiliate: 10% discount.
    Customer for over 2 years: 5% discount.
    Every $100 on the bill: $5 discount.
-   Discount rules do not apply to groceries.
+   Percentage Discount rules do not apply to groceries.
    Only one percentage discount can apply to a bill.
+   Every $100 on the bill: $5 discount will apply to all the bill.
 
    Currency Conversion:
    Convert the total amount to the target currency using the retrieved exchange rates.
    Calculate the final payable amount in the target currency after applying discounts.
 
-3. Authentication:
+4. Authentication:
 
    API endpoints are secured using authentication mechanisms.
 
-4. API Endpoint:
+5. API Endpoint:
 
    The main API endpoint for calculation: /api/calculate
    Accepts parameters like:
@@ -47,40 +48,21 @@ https://open.er-api.com/v6/latest/{base_currency}?apikey=your-api-key
    Original currency and target currency.
    Returns the net payable amount in the target currency.
 
-5. Design and Testing:
+6. Design and Testing:
 
    Use object-oriented principles for application design.
    Provide a high-level UML class diagram for the solution.
    Write unit tests with appropriate mocking where applicable.
    Maintain simplicity and adhere to modern software development practices.
 
-6. Documentation:
+7. Documentation:
 
    This README file provides information on running the code, testing, and generating coverage reports.
 
 Project Structure
 
-src/
-├── main/
-│   ├── java/
-│   │   ├── com/
-│   │   │   ├── exchangerate/
-│   │   │   │   ├── discountcalculator/
-│   │   │   │   │   ├── controllers/
-│   │   │   │   │   ├── models/
-│   │   │   │   │   ├── services/
-│   │   │   │   │   └── utils/
-│   │   └── resources/
-│   │       └── application.properties
-└── test/
-├── java/
-│   └── com/
-│       ├── exchangerate/
-│       │   ├── discountcalculator/
-│       │   │   ├── controllers/
-│       │   │   ├── services/
-│       │   │   └── utils/
-└── resources/
+
+![image](https://github.com/user-attachments/assets/a9b0bf6d-6f86-4876-b5f8-c5109928b252)
 
 How to Run
 Prerequisites
