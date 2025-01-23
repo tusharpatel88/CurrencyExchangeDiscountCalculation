@@ -161,9 +161,46 @@ Technologies Used
     Caffeine: For caching exchange rates.
     SonarQube: For static code analysis and quality reporting.
 
-UML Class Diagram
+Commands to run for various case
+**Build the Project**
+mvn clean install
 
-A high-level UML class diagram for the solution is available in the docs/uml-class-diagram.png file.
-License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+
+**Run the Spring Boot Application**
+mvn spring-boot:run
+
+Starts the Spring Boot application.The API will be available at http://localhost:8080/api/calculate.
+
+**Run Unit Tests**
+mvn test
+Runs all unit tests in the project. Ensures that the functionality of the application works as expected.
+
+**Run Static Code Analysis (PMD)**
+mvn pmd:pmd
+Runs static code analysis using the PMD plugin. It checks your code for potential issues and generates an HTML report.
+
+**Generate Code Coverage Report (Jacoco)**
+mvn jacoco:report
+Generates the Jacoco code coverage report. This step should be run after tests to get detailed coverage stats.
+
+**Run SonarQube Analysis**
+mvn sonar:sonar
+Runs the SonarQube scanner and sends the results to a SonarQube server. This helps to analyze and monitor code quality and maintainability.
+
+**Compile the Project (Without Running Tests)**
+mvn compile
+Compiles the project's source code without running any tests, making it a faster option for just compiling.
+Clean the Project
+
+**mvn clean**
+Removes the target directory where the compiled artifacts are stored. Ensures a fresh build with no leftover files.
+Install the Project into the Local Repository
+
+**mvn install**
+Installs the built artifacts (like the JAR file) into the local Maven repository (~/.m2/repository). This is useful when other projects depend on this artifact.
+Validate the Project
+
+**mvn clean install -DskipTests**
+Builds the project and installs it without running tests. Useful for quick builds when you are confident that tests are already passing.
+
